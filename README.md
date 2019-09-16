@@ -7,16 +7,9 @@ Copy paste `inc/litegraph.cpp` to custom project or install to system with `sudo
 
 ### Test
 
-Compile the `example_test` with `make` and run with `make run`. The example test instantiates and runs routines on the following example graph:
+Compile the `example_test` with `make` and run with `make run`. The example test instantiates and runs routines on the following example graph 
 
-```mermaid
-graph TD;
-0 -->1;
-1 -->2;
-2 -->3;
-3 -->1;
-3 -->3;
-```
+![](./docs/example_graph.svg)
 
 ### API
 
