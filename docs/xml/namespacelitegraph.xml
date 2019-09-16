@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacelitegraph" kind="namespace" language="C++">
+    <compoundname>litegraph</compoundname>
+    <innerclass refid="classlitegraph_1_1Edge" prot="public">litegraph::Edge</innerclass>
+    <innerclass refid="classlitegraph_1_1Graph" prot="public">litegraph::Graph</innerclass>
+    <innerclass refid="classlitegraph_1_1Node" prot="public">litegraph::Node</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3" prot="public" static="no">
+        <name>dir_t</name>
+        <enumvalue id="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3a050f5090dc230bc8ba731b83c52f645b" prot="public">
+          <name>AtoB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3a90b2413f4ff0e807cf12dca3d96beeb4" prot="public">
+          <name>BtoA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3ad5c4b922c0781abba65b6e85517590a9" prot="public">
+          <name>Both</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>direction type enum, can be [AtoB,BtoA,Both] </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="48" column="1" bodyfile="inc/litegraph.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="litegraph_8hpp_1a423f56f4dde8cd53cb18abd47b6a1ef2" prot="public" static="no">
+        <type>std::vector&lt; std::vector&lt; T &gt; &gt;</type>
+        <definition>using litegraph::Matrix2D = typedef std::vector&lt;std::vector&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="17" column="1" bodyfile="inc/litegraph.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/litegraph.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

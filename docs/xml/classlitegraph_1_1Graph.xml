@@ -1,0 +1,1307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classlitegraph_1_1Graph" kind="class" language="C++" prot="public">
+    <compoundname>litegraph::Graph</compoundname>
+    <includes refid="litegraph_8hpp" local="no">litegraph.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+        <defval>int</defval>
+      </param>
+      <param>
+        <type>class E</type>
+        <defval>int</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1a3d65c3612d40ba9e2f9ef2fefab1eacd" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int litegraph::Graph&lt; T, E &gt;::MAX_NODES</definition>
+        <argsstring></argsstring>
+        <name>MAX_NODES</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="92" column="1" bodyfile="inc/litegraph.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1ae463a702b221bc6d88311472cfc32625" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool litegraph::Graph&lt; T, E &gt;::_adjMat[MAX_NODES][MAX_NODES]</definition>
+        <argsstring>[MAX_NODES][MAX_NODES]</argsstring>
+        <name>_adjMat</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="93" column="1" bodyfile="inc/litegraph.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1a362827db894931ab6d8a6fa344d18373" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::pair&lt; int, int &gt;, E &gt;</type>
+        <definition>std::map&lt;std::pair&lt;int,int&gt;,E&gt; litegraph::Graph&lt; T, E &gt;::_adjMatObj</definition>
+        <argsstring></argsstring>
+        <name>_adjMatObj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="94" column="1" bodyfile="inc/litegraph.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1a23f68a3399ac3a4e55712e947e0b2b3d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, int &gt;</type>
+        <definition>std::map&lt;std::string,int&gt; litegraph::Graph&lt; T, E &gt;::_nodes_dict</definition>
+        <argsstring></argsstring>
+        <name>_nodes_dict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="95" column="1" bodyfile="inc/litegraph.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1a90dd013bf9042c47be529eb1ca8435bc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt;T&gt; litegraph::Graph&lt; T, E &gt;::_nodes</definition>
+        <argsstring></argsstring>
+        <name>_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="96" column="1" bodyfile="inc/litegraph.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1afb4cca6846ab1b6b34c665f25f0512e1" prot="private" static="no" mutable="no">
+        <type>Matrix2D&lt; int &gt;</type>
+        <definition>Matrix2D&lt;int&gt; litegraph::Graph&lt; T, E &gt;::_loopsMat</definition>
+        <argsstring></argsstring>
+        <name>_loopsMat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="97" column="1" bodyfile="inc/litegraph.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlitegraph_1_1Graph_1a924a7ec42d462e9a1eee9d04e39033ca" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Matrix2D&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;Matrix2D&lt;int&gt; &gt; litegraph::Graph&lt; T, E &gt;::_walksMat</definition>
+        <argsstring></argsstring>
+        <name>_walksMat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="102" column="1" bodyfile="inc/litegraph.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a12cc129bd0eb148e5703d810a825318b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>litegraph::Graph&lt; T, E &gt;::Graph</definition>
+        <argsstring>()</argsstring>
+        <name>Graph</name>
+        <briefdescription>
+<para>graph constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="63" column="1" bodyfile="inc/litegraph.hpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a21be4c8da4919456c3bc71f2e08812ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>litegraph::Graph&lt; T, E &gt;::~Graph</definition>
+        <argsstring>()</argsstring>
+        <name>~Graph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="67" column="1" bodyfile="inc/litegraph.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a1f3eff13f5cf08258594bbe7cf40503b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::add_nodes</definition>
+        <argsstring>(int num)</argsstring>
+        <name>add_nodes</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>adds a number of generic nodes to the graph </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of nodes to be added</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="69" column="1" bodyfile="inc/litegraph.hpp" bodystart="160" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a476c0aa77439348c6f829b614b619aeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::add_node</definition>
+        <argsstring>(const T &amp;node=T())</argsstring>
+        <name>add_node</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>node</declname>
+          <defval>T()</defval>
+        </param>
+        <briefdescription>
+<para>adds a node/vertex to the graph </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] node class instance to associate with vertex</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="70" column="1" bodyfile="inc/litegraph.hpp" bodystart="134" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1ad218cf49859923a415ad838ba56b0ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::add_node</definition>
+        <argsstring>(const T &amp;node, std::string name)</argsstring>
+        <name>add_node</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>adds a node/vertex to the graph </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] node class instance to associate with vertex </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="71" column="1" bodyfile="inc/litegraph.hpp" bodystart="179" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1ab99eb9988ddc5734afba373a97b44423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::add_edge</definition>
+        <argsstring>(int src, int dst, dir_t dir=AtoB, const E &amp;edge=E())</argsstring>
+        <name>add_edge</name>
+        <param>
+          <type>int</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>dir_t</type>
+          <declname>dir</declname>
+          <defval>AtoB</defval>
+        </param>
+        <param>
+          <type>const E &amp;</type>
+          <declname>edge</declname>
+          <defval>E()</defval>
+        </param>
+        <briefdescription>
+<para>adds an edge to the graph, in between two nodes </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source node id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination node id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge direction (src-&gt;dst by default) [member of dir_t enum] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] edge Class instance to associate with link</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="72" column="1" bodyfile="inc/litegraph.hpp" bodystart="214" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1aecce1029e4ec451ab609c474e00f283f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::add_edge</definition>
+        <argsstring>(std::string src, std::string dst, dir_t dir=AtoB, const E &amp;edge=E())</argsstring>
+        <name>add_edge</name>
+        <param>
+          <type>std::string</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>dir_t</type>
+          <declname>dir</declname>
+          <defval>AtoB</defval>
+        </param>
+        <param>
+          <type>const E &amp;</type>
+          <declname>edge</declname>
+          <defval>E()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="73" column="1" bodyfile="inc/litegraph.hpp" bodystart="194" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a8a7a1e54a475668cdda309ee41501642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::remove_edge</definition>
+        <argsstring>(int A, int B)</argsstring>
+        <name>remove_edge</name>
+        <param>
+          <type>int</type>
+          <declname>A</declname>
+          <defname>src</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>B</declname>
+          <defname>dst</defname>
+        </param>
+        <briefdescription>
+<para>removes a previously added edge from the graph </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source node id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dst node id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="74" column="1" bodyfile="inc/litegraph.hpp" bodystart="290" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a2a44ddff3d0fa31a70c7fe0102e114e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; litegraph::Graph&lt; T, E &gt;::operator[]</definition>
+        <argsstring>(int node_id)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>node_id</declname>
+        </param>
+        <briefdescription>
+<para>node selection operator (by id) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node Class instance (by reference) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="75" column="1" bodyfile="inc/litegraph.hpp" bodystart="325" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a791c3a42fa2150cbf02baed18765f72e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T litegraph::Graph&lt; T, E &gt;::operator[]</definition>
+        <argsstring>(int node_id) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>node_id</declname>
+        </param>
+        <briefdescription>
+<para>node selection operator (by id) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node Class instance (by copy) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="76" column="1" bodyfile="inc/litegraph.hpp" bodystart="341" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1acbeefc1b802edb8c5886fa764a5e1507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; litegraph::Graph&lt; T, E &gt;::operator[]</definition>
+        <argsstring>(std::string node_name)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::string</type>
+          <declname>node_name</declname>
+        </param>
+        <briefdescription>
+<para>node selection operator (by name) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node Class instance (by reference) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="77" column="1" bodyfile="inc/litegraph.hpp" bodystart="357" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a15c0fc0dfe015a19d09d568407dad2f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T litegraph::Graph&lt; T, E &gt;::operator[]</definition>
+        <argsstring>(std::string node_name) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::string</type>
+          <declname>node_name</declname>
+        </param>
+        <briefdescription>
+<para>node selection operator (by name) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node Class instance (by copy) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="78" column="1" bodyfile="inc/litegraph.hpp" bodystart="374" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1aa7009938b623c493b2017c3cea97574e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>E &amp;</type>
+        <definition>E &amp; litegraph::Graph&lt; T, E &gt;::operator()</definition>
+        <argsstring>(int src, int dst)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>int</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>edge selection operator (from node src to node dst) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dest node</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>edge Class instance (by reference) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="79" column="1" bodyfile="inc/litegraph.hpp" bodystart="392" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a5761af304131b2977a756d0a5dcd5b4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>E</type>
+        <definition>E litegraph::Graph&lt; T, E &gt;::operator()</definition>
+        <argsstring>(int src, int dst) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>int</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>edge operator (from node src to node dst) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dest node</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>edge Class instance (by copy) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="80" column="1" bodyfile="inc/litegraph.hpp" bodystart="409" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a48e0035e3e126eb0c6f23692d6fab16d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string litegraph::Graph&lt; T, E &gt;::name</definition>
+        <argsstring>(int node_id)</argsstring>
+        <name>name</name>
+        <param>
+          <type>int</type>
+          <declname>node_id</declname>
+        </param>
+        <briefdescription>
+<para>retrieves node name from its id </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target node id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string node name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="81" column="1" bodyfile="inc/litegraph.hpp" bodystart="250" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a74f404758d946ef99d0fa803ce98ee40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int litegraph::Graph&lt; T, E &gt;::id</definition>
+        <argsstring>(std::string node_name)</argsstring>
+        <name>id</name>
+        <param>
+          <type>std::string</type>
+          <declname>node_name</declname>
+        </param>
+        <briefdescription>
+<para>retrieves node id from its name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int node id </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="82" column="1" bodyfile="inc/litegraph.hpp" bodystart="273" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1aaa0517e9ac14a77d552ce635ee9952c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int litegraph::Graph&lt; T, E &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>retrives graph size (number of nodes) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int nodes number </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="83" column="1" bodyfile="inc/litegraph.hpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1ab45a134fd4a850085e7e709bb3e91764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool litegraph::Graph&lt; T, E &gt;::is_edge</definition>
+        <argsstring>(int src, int dst)</argsstring>
+        <name>is_edge</name>
+        <param>
+          <type>int</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>checks if an edge is present in between two nodes </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source node id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination node id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool (is there an edge ?) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="84" column="1" bodyfile="inc/litegraph.hpp" bodystart="308" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a065ec79ff100c687df78e4e90172e17b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; int &gt;</type>
+        <definition>std::set&lt; int &gt; litegraph::Graph&lt; T, E &gt;::neighbors</definition>
+        <argsstring>(int node_id) const</argsstring>
+        <name>neighbors</name>
+        <param>
+          <type>int</type>
+          <declname>node_id</declname>
+        </param>
+        <briefdescription>
+<para>returns a set of neighbouring (distance 1) nodes </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target node id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>set of node ids </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="85" column="1" bodyfile="inc/litegraph.hpp" bodystart="425" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a0d7fe1dcd24ddf296688b118528e7f4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Matrix2D&lt; int &gt;</type>
+        <definition>Matrix2D&lt; int &gt; litegraph::Graph&lt; T, E &gt;::seek_loops</definition>
+        <argsstring>()</argsstring>
+        <name>seek_loops</name>
+        <briefdescription>
+<para>check the walk matrices for graph loops </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>loopMatrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="86" column="1" bodyfile="inc/litegraph.hpp" bodystart="553" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a808c3e69501e924be8f63a9f722dc91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool litegraph::Graph&lt; T, E &gt;::has_loops</definition>
+        <argsstring>(int node_id=-1)</argsstring>
+        <name>has_loops</name>
+        <param>
+          <type>int</type>
+          <declname>node_id</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>checks if a specific node (or the graph in general) has loops </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target node</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool (node has loops?) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="87" column="1" bodyfile="inc/litegraph.hpp" bodystart="600" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1ad3e8c02ec87f10d3c2723265e30fc6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::print_walk</definition>
+        <argsstring>(int id)</argsstring>
+        <name>print_walk</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>prints walk matrices </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>step distance/level</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="88" column="1" bodyfile="inc/litegraph.hpp" bodystart="503" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a1c505004169416bf4ede9e6ed3856ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::print_loops</definition>
+        <argsstring>()</argsstring>
+        <name>print_loops</name>
+        <briefdescription>
+<para>prints loop matrix Node_id x Steps </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="89" column="1" bodyfile="inc/litegraph.hpp" bodystart="578" bodyend="588"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1ae3e33708c0a1bf2e421d945f39fe3276" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::_gen_walks</definition>
+        <argsstring>()</argsstring>
+        <name>_gen_walks</name>
+        <briefdescription>
+<para>generates walk matrices </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="98" column="1" bodyfile="inc/litegraph.hpp" bodystart="447" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a351d62f5a7dc0a8b3251bc0e8cfeee5d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::_boolMat2mat2D</definition>
+        <argsstring>(Matrix2D&lt; int &gt; &amp;out, const bool in[][MAX_NODES], int size)</argsstring>
+        <name>_boolMat2mat2D</name>
+        <param>
+          <type>Matrix2D&lt; int &gt; &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>in</declname>
+          <array>[][MAX_NODES]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>private, converts square bool matrix to Matrix2D&lt;int&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in[][MAX_NODE]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input bool matrix/table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="99" column="1" bodyfile="inc/litegraph.hpp" bodystart="483" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1a3b91d5b50bff9e47e2c6c2f8ca71fb7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::_mat_mult</definition>
+        <argsstring>(Matrix2D&lt; int &gt; &amp;res, const Matrix2D&lt; int &gt; &amp;A, const Matrix2D&lt; int &gt; &amp;B, int size)</argsstring>
+        <name>_mat_mult</name>
+        <param>
+          <type>Matrix2D&lt; int &gt; &amp;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>const Matrix2D&lt; int &gt; &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const Matrix2D&lt; int &gt; &amp;</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>square matrix multiplication private method </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first operand matrix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second operand matrix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>operand matrices (nxn) size n</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="100" column="1" bodyfile="inc/litegraph.hpp" bodystart="530" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Graph_1acad7d853be0de6c874247b69accb003b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void litegraph::Graph&lt; T, E &gt;::_mat_pow</definition>
+        <argsstring>(int res[][MAX_NODES], const int base[][MAX_NODES], int size, int p)</argsstring>
+        <name>_mat_pow</name>
+        <param>
+          <type>int</type>
+          <declname>res</declname>
+          <array>[][MAX_NODES]</array>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>base</declname>
+          <array>[][MAX_NODES]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="101" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>templated <ref refid="classlitegraph_1_1Graph" kindref="compound">Graph</ref> class. Contains methods to generate and interact node-edges graphs. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>edge Class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="inc/litegraph.hpp" line="58" column="1" bodyfile="inc/litegraph.hpp" bodystart="57" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classlitegraph_1_1Graph_1ae463a702b221bc6d88311472cfc32625" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_adjMat</name></member>
+      <member refid="classlitegraph_1_1Graph_1a362827db894931ab6d8a6fa344d18373" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_adjMatObj</name></member>
+      <member refid="classlitegraph_1_1Graph_1a351d62f5a7dc0a8b3251bc0e8cfeee5d" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_boolMat2mat2D</name></member>
+      <member refid="classlitegraph_1_1Graph_1ae3e33708c0a1bf2e421d945f39fe3276" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_gen_walks</name></member>
+      <member refid="classlitegraph_1_1Graph_1afb4cca6846ab1b6b34c665f25f0512e1" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_loopsMat</name></member>
+      <member refid="classlitegraph_1_1Graph_1a3b91d5b50bff9e47e2c6c2f8ca71fb7b" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_mat_mult</name></member>
+      <member refid="classlitegraph_1_1Graph_1acad7d853be0de6c874247b69accb003b" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_mat_pow</name></member>
+      <member refid="classlitegraph_1_1Graph_1a90dd013bf9042c47be529eb1ca8435bc" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_nodes</name></member>
+      <member refid="classlitegraph_1_1Graph_1a23f68a3399ac3a4e55712e947e0b2b3d" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_nodes_dict</name></member>
+      <member refid="classlitegraph_1_1Graph_1a924a7ec42d462e9a1eee9d04e39033ca" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>_walksMat</name></member>
+      <member refid="classlitegraph_1_1Graph_1ab99eb9988ddc5734afba373a97b44423" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>add_edge</name></member>
+      <member refid="classlitegraph_1_1Graph_1aecce1029e4ec451ab609c474e00f283f" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>add_edge</name></member>
+      <member refid="classlitegraph_1_1Graph_1a476c0aa77439348c6f829b614b619aeb" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>add_node</name></member>
+      <member refid="classlitegraph_1_1Graph_1ad218cf49859923a415ad838ba56b0ea2" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>add_node</name></member>
+      <member refid="classlitegraph_1_1Graph_1a1f3eff13f5cf08258594bbe7cf40503b" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>add_nodes</name></member>
+      <member refid="classlitegraph_1_1Graph_1a12cc129bd0eb148e5703d810a825318b" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>Graph</name></member>
+      <member refid="classlitegraph_1_1Graph_1a808c3e69501e924be8f63a9f722dc91b" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>has_loops</name></member>
+      <member refid="classlitegraph_1_1Graph_1a74f404758d946ef99d0fa803ce98ee40" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>id</name></member>
+      <member refid="classlitegraph_1_1Graph_1ab45a134fd4a850085e7e709bb3e91764" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>is_edge</name></member>
+      <member refid="classlitegraph_1_1Graph_1a3d65c3612d40ba9e2f9ef2fefab1eacd" prot="private" virt="non-virtual"><scope>litegraph::Graph</scope><name>MAX_NODES</name></member>
+      <member refid="classlitegraph_1_1Graph_1a48e0035e3e126eb0c6f23692d6fab16d" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>name</name></member>
+      <member refid="classlitegraph_1_1Graph_1a065ec79ff100c687df78e4e90172e17b" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>neighbors</name></member>
+      <member refid="classlitegraph_1_1Graph_1aa7009938b623c493b2017c3cea97574e" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>operator()</name></member>
+      <member refid="classlitegraph_1_1Graph_1a5761af304131b2977a756d0a5dcd5b4e" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>operator()</name></member>
+      <member refid="classlitegraph_1_1Graph_1a2a44ddff3d0fa31a70c7fe0102e114e2" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>operator[]</name></member>
+      <member refid="classlitegraph_1_1Graph_1a791c3a42fa2150cbf02baed18765f72e" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>operator[]</name></member>
+      <member refid="classlitegraph_1_1Graph_1acbeefc1b802edb8c5886fa764a5e1507" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>operator[]</name></member>
+      <member refid="classlitegraph_1_1Graph_1a15c0fc0dfe015a19d09d568407dad2f0" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>operator[]</name></member>
+      <member refid="classlitegraph_1_1Graph_1a1c505004169416bf4ede9e6ed3856ae0" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>print_loops</name></member>
+      <member refid="classlitegraph_1_1Graph_1ad3e8c02ec87f10d3c2723265e30fc6fc" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>print_walk</name></member>
+      <member refid="classlitegraph_1_1Graph_1a8a7a1e54a475668cdda309ee41501642" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>remove_edge</name></member>
+      <member refid="classlitegraph_1_1Graph_1a0d7fe1dcd24ddf296688b118528e7f4c" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>seek_loops</name></member>
+      <member refid="classlitegraph_1_1Graph_1aaa0517e9ac14a77d552ce635ee9952c3" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>size</name></member>
+      <member refid="classlitegraph_1_1Graph_1a21be4c8da4919456c3bc71f2e08812ae" prot="public" virt="non-virtual"><scope>litegraph::Graph</scope><name>~Graph</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

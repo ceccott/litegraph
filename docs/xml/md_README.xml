@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="md_README" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>litegraph</title>
+    <detaileddescription>
+<para>A lightweight header only C++ library for graph abstraction and implementation</para><para><heading level="3">Install</heading>
+</para><para>Copy paste <computeroutput>inc/litegraph.cpp</computeroutput> to custom project or install to system with <computeroutput>sudo make install</computeroutput></para><para><heading level="3">Test</heading>
+</para><para>Compile the <computeroutput>example_test</computeroutput> with <computeroutput>make</computeroutput> and run with <computeroutput>make run</computeroutput>. The example test instantiates and runs routines on the following graph</para><para><programlisting><codeline><highlight class="normal">graph<sp/>TD;</highlight></codeline>
+<codeline><highlight class="normal">0<sp/>--&gt;1;</highlight></codeline>
+<codeline><highlight class="normal">1<sp/>--&gt;2;</highlight></codeline>
+<codeline><highlight class="normal">2<sp/>--&gt;3;</highlight></codeline>
+<codeline><highlight class="normal">3<sp/>--&gt;1;</highlight></codeline>
+<codeline><highlight class="normal">3<sp/>--&gt;3;</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

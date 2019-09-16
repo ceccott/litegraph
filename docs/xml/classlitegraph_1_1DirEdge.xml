@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classlitegraph_1_1DirEdge" kind="class" language="C++" prot="public">
+    <compoundname>litegraph::DirEdge</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlitegraph_1_1DirEdge_1a280661b961c408d3cc7c7e01d25e861b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int litegraph::DirEdge::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="36" column="1" bodyfile="inc/litegraph.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlitegraph_1_1DirEdge_1a2fbdc20c37b174c1d5cbc5d12f197343" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>litegraph::DirEdge::DirEdge</definition>
+        <argsstring>(int val=0)</argsstring>
+        <name>DirEdge</name>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="33" column="1" bodyfile="inc/litegraph.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1DirEdge_1a914a93f58f21af0c1dba2f96820b5f87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual litegraph::DirEdge::~DirEdge</definition>
+        <argsstring>()</argsstring>
+        <name>~DirEdge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="34" column="1" bodyfile="inc/litegraph.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/litegraph.hpp" line="31" column="1" bodyfile="inc/litegraph.hpp" bodystart="30" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classlitegraph_1_1DirEdge_1a280661b961c408d3cc7c7e01d25e861b" prot="private" virt="non-virtual"><scope>litegraph::DirEdge</scope><name>_value</name></member>
+      <member refid="classlitegraph_1_1DirEdge_1a2fbdc20c37b174c1d5cbc5d12f197343" prot="public" virt="non-virtual"><scope>litegraph::DirEdge</scope><name>DirEdge</name></member>
+      <member refid="classlitegraph_1_1DirEdge_1a914a93f58f21af0c1dba2f96820b5f87" prot="public" virt="virtual"><scope>litegraph::DirEdge</scope><name>~DirEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

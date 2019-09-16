@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>litegraph</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>lightweight<sp/>header<sp/>only<sp/>C++<sp/>library<sp/>for<sp/>graph<sp/>abstraction<sp/>and<sp/>implementation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Install</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Copy<sp/>paste<sp/>`inc/litegraph.cpp`<sp/>to<sp/>custom<sp/>project<sp/>or<sp/>install<sp/>to<sp/>system<sp/>with<sp/>`sudo<sp/>make<sp/>install`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Test</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Compile<sp/>the<sp/>`example_test`<sp/>with<sp/>`make`<sp/>and<sp/>run<sp/>with<sp/>`make<sp/>run`.<sp/>The<sp/>example<sp/>test<sp/>instantiates<sp/>and<sp/>runs<sp/>routines<sp/>on<sp/>the<sp/>following<sp/>graph</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```mermaid</highlight></codeline>
+<codeline><highlight class="normal">graph<sp/>TD;</highlight></codeline>
+<codeline><highlight class="normal">0<sp/>--&gt;1;</highlight></codeline>
+<codeline><highlight class="normal">1<sp/>--&gt;2;</highlight></codeline>
+<codeline><highlight class="normal">2<sp/>--&gt;3;</highlight></codeline>
+<codeline><highlight class="normal">3<sp/>--&gt;1;</highlight></codeline>
+<codeline><highlight class="normal">3<sp/>--&gt;3;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

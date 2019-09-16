@@ -1,0 +1,20 @@
+A lightweight header only C++ library for graph abstraction and implementation
+
+\subsubsection*{Install}
+
+Copy paste {\ttfamily inc/litegraph.\+cpp} to custom project or install to system with {\ttfamily sudo make install}
+
+\subsubsection*{Test}
+
+Compile the {\ttfamily example\+\_\+test} with {\ttfamily make} and run with {\ttfamily make run}. The example test instantiates and runs routines on the following graph
+
+
+\begin{DoxyCode}
+graph TD;
+0 -->1;
+1 -->2;
+2 -->3;
+3 -->1;
+3 -->3;
+\end{DoxyCode}
+ 

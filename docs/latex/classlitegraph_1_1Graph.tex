@@ -1,0 +1,604 @@
+\hypertarget{classlitegraph_1_1Graph}{}\section{litegraph\+:\+:Graph$<$ T, E $>$ Class Template Reference}
+\label{classlitegraph_1_1Graph}\index{litegraph\+::\+Graph$<$ T, E $>$@{litegraph\+::\+Graph$<$ T, E $>$}}
+
+
+templated \hyperlink{classlitegraph_1_1Graph}{Graph} class. Contains methods to generate and interact node-\/edges graphs.  
+
+
+
+
+{\ttfamily \#include $<$litegraph.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a12cc129bd0eb148e5703d810a825318b}\label{classlitegraph_1_1Graph_a12cc129bd0eb148e5703d810a825318b}} 
+\hyperlink{classlitegraph_1_1Graph_a12cc129bd0eb148e5703d810a825318b}{Graph} ()
+\begin{DoxyCompactList}\small\item\em graph constructor \end{DoxyCompactList}\item 
+void \hyperlink{classlitegraph_1_1Graph_a1f3eff13f5cf08258594bbe7cf40503b}{add\+\_\+nodes} (int num)
+\begin{DoxyCompactList}\small\item\em adds a number of generic nodes to the graph \end{DoxyCompactList}\item 
+void \hyperlink{classlitegraph_1_1Graph_a476c0aa77439348c6f829b614b619aeb}{add\+\_\+node} (const T \&node=T())
+\begin{DoxyCompactList}\small\item\em adds a node/vertex to the graph \end{DoxyCompactList}\item 
+void \hyperlink{classlitegraph_1_1Graph_ad218cf49859923a415ad838ba56b0ea2}{add\+\_\+node} (const T \&node, std\+::string \hyperlink{classlitegraph_1_1Graph_a48e0035e3e126eb0c6f23692d6fab16d}{name})
+\begin{DoxyCompactList}\small\item\em adds a node/vertex to the graph \end{DoxyCompactList}\item 
+void \hyperlink{classlitegraph_1_1Graph_ab99eb9988ddc5734afba373a97b44423}{add\+\_\+edge} (int src, int dst, dir\+\_\+t dir=AtoB, const E \&edge=E())
+\begin{DoxyCompactList}\small\item\em adds an edge to the graph, in between two nodes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlitegraph_1_1Graph_aecce1029e4ec451ab609c474e00f283f}\label{classlitegraph_1_1Graph_aecce1029e4ec451ab609c474e00f283f}} 
+void {\bfseries add\+\_\+edge} (std\+::string src, std\+::string dst, dir\+\_\+t dir=AtoB, const E \&edge=E())
+\item 
+void \hyperlink{classlitegraph_1_1Graph_a8a7a1e54a475668cdda309ee41501642}{remove\+\_\+edge} (int A, int B)
+\begin{DoxyCompactList}\small\item\em removes a previously added edge from the graph \end{DoxyCompactList}\item 
+T \& \hyperlink{classlitegraph_1_1Graph_a2a44ddff3d0fa31a70c7fe0102e114e2}{operator\mbox{[}$\,$\mbox{]}} (int node\+\_\+id)
+\begin{DoxyCompactList}\small\item\em node selection operator (by id) \end{DoxyCompactList}\item 
+T \hyperlink{classlitegraph_1_1Graph_a791c3a42fa2150cbf02baed18765f72e}{operator\mbox{[}$\,$\mbox{]}} (int node\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em node selection operator (by id) \end{DoxyCompactList}\item 
+T \& \hyperlink{classlitegraph_1_1Graph_acbeefc1b802edb8c5886fa764a5e1507}{operator\mbox{[}$\,$\mbox{]}} (std\+::string node\+\_\+name)
+\begin{DoxyCompactList}\small\item\em node selection operator (by name) \end{DoxyCompactList}\item 
+T \hyperlink{classlitegraph_1_1Graph_a15c0fc0dfe015a19d09d568407dad2f0}{operator\mbox{[}$\,$\mbox{]}} (std\+::string node\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em node selection operator (by name) \end{DoxyCompactList}\item 
+E \& \hyperlink{classlitegraph_1_1Graph_aa7009938b623c493b2017c3cea97574e}{operator()} (int src, int dst)
+\begin{DoxyCompactList}\small\item\em edge selection operator (from node src to node dst) \end{DoxyCompactList}\item 
+E \hyperlink{classlitegraph_1_1Graph_a5761af304131b2977a756d0a5dcd5b4e}{operator()} (int src, int dst) const
+\begin{DoxyCompactList}\small\item\em edge operator (from node src to node dst) \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classlitegraph_1_1Graph_a48e0035e3e126eb0c6f23692d6fab16d}{name} (int node\+\_\+id)
+\begin{DoxyCompactList}\small\item\em retrieves node name from its id \end{DoxyCompactList}\item 
+int \hyperlink{classlitegraph_1_1Graph_a74f404758d946ef99d0fa803ce98ee40}{id} (std\+::string node\+\_\+name)
+\begin{DoxyCompactList}\small\item\em retrieves node id from its name \end{DoxyCompactList}\item 
+int \hyperlink{classlitegraph_1_1Graph_aaa0517e9ac14a77d552ce635ee9952c3}{size} ()
+\begin{DoxyCompactList}\small\item\em retrives graph size (number of nodes) \end{DoxyCompactList}\item 
+bool \hyperlink{classlitegraph_1_1Graph_ab45a134fd4a850085e7e709bb3e91764}{is\+\_\+edge} (int src, int dst)
+\begin{DoxyCompactList}\small\item\em checks if an edge is present in between two nodes \end{DoxyCompactList}\item 
+std\+::set$<$ int $>$ \hyperlink{classlitegraph_1_1Graph_a065ec79ff100c687df78e4e90172e17b}{neighbors} (int node\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em returns a set of neighbouring (distance 1) nodes \end{DoxyCompactList}\item 
+Matrix2D$<$ int $>$ \hyperlink{classlitegraph_1_1Graph_a0d7fe1dcd24ddf296688b118528e7f4c}{seek\+\_\+loops} ()
+\begin{DoxyCompactList}\small\item\em check the walk matrices for graph loops \end{DoxyCompactList}\item 
+bool \hyperlink{classlitegraph_1_1Graph_a808c3e69501e924be8f63a9f722dc91b}{has\+\_\+loops} (int node\+\_\+id=-\/1)
+\begin{DoxyCompactList}\small\item\em checks if a specific node (or the graph in general) has loops \end{DoxyCompactList}\item 
+void \hyperlink{classlitegraph_1_1Graph_ad3e8c02ec87f10d3c2723265e30fc6fc}{print\+\_\+walk} (int \hyperlink{classlitegraph_1_1Graph_a74f404758d946ef99d0fa803ce98ee40}{id})
+\begin{DoxyCompactList}\small\item\em prints walk matrices \end{DoxyCompactList}\item 
+void \hyperlink{classlitegraph_1_1Graph_a1c505004169416bf4ede9e6ed3856ae0}{print\+\_\+loops} ()
+\begin{DoxyCompactList}\small\item\em prints loop matrix Node\+\_\+id x Steps \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T = int, class E = int$>$\newline
+class litegraph\+::\+Graph$<$ T, E $>$}
+
+templated \hyperlink{classlitegraph_1_1Graph}{Graph} class. Contains methods to generate and interact node-\/edges graphs. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_ab99eb9988ddc5734afba373a97b44423}\label{classlitegraph_1_1Graph_ab99eb9988ddc5734afba373a97b44423}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!add\+\_\+edge@{add\+\_\+edge}}
+\index{add\+\_\+edge@{add\+\_\+edge}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{add\+\_\+edge()}{add\_edge()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dst,  }\item[{dir\+\_\+t}]{dir = {\ttfamily AtoB},  }\item[{const E \&}]{edge = {\ttfamily E()} }\end{DoxyParamCaption})}
+
+
+
+adds an edge to the graph, in between two nodes 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & source node id \\
+\hline
+{\em dst} & destination node id \\
+\hline
+{\em dir} & edge direction (src-\/$>$dst by default) \mbox{[}member of dir\+\_\+t enum\mbox{]} \\
+\hline
+{\em edge} & \mbox{[}optional\mbox{]} edge Class instance to associate with link\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a476c0aa77439348c6f829b614b619aeb}\label{classlitegraph_1_1Graph_a476c0aa77439348c6f829b614b619aeb}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!add\+\_\+node@{add\+\_\+node}}
+\index{add\+\_\+node@{add\+\_\+node}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{add\+\_\+node()}{add\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::add\+\_\+node (\begin{DoxyParamCaption}\item[{const T \&}]{node = {\ttfamily T()} }\end{DoxyParamCaption})}
+
+
+
+adds a node/vertex to the graph 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & \mbox{[}optional\mbox{]} node class instance to associate with vertex\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_ad218cf49859923a415ad838ba56b0ea2}\label{classlitegraph_1_1Graph_ad218cf49859923a415ad838ba56b0ea2}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!add\+\_\+node@{add\+\_\+node}}
+\index{add\+\_\+node@{add\+\_\+node}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{add\+\_\+node()}{add\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::add\+\_\+node (\begin{DoxyParamCaption}\item[{const T \&}]{node,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+adds a node/vertex to the graph 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & \mbox{[}optional\mbox{]} node class instance to associate with vertex \\
+\hline
+{\em name} & node name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a1f3eff13f5cf08258594bbe7cf40503b}\label{classlitegraph_1_1Graph_a1f3eff13f5cf08258594bbe7cf40503b}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!add\+\_\+nodes@{add\+\_\+nodes}}
+\index{add\+\_\+nodes@{add\+\_\+nodes}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{add\+\_\+nodes()}{add\_nodes()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::add\+\_\+nodes (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+adds a number of generic nodes to the graph 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em num} & number of nodes to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a808c3e69501e924be8f63a9f722dc91b}\label{classlitegraph_1_1Graph_a808c3e69501e924be8f63a9f722dc91b}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!has\+\_\+loops@{has\+\_\+loops}}
+\index{has\+\_\+loops@{has\+\_\+loops}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{has\+\_\+loops()}{has\_loops()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+bool \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::has\+\_\+loops (\begin{DoxyParamCaption}\item[{int}]{node\+\_\+id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+checks if a specific node (or the graph in general) has loops 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+id} & target node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool (node has loops?) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a74f404758d946ef99d0fa803ce98ee40}\label{classlitegraph_1_1Graph_a74f404758d946ef99d0fa803ce98ee40}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!id@{id}}
+\index{id@{id}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+int \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::id (\begin{DoxyParamCaption}\item[{std\+::string}]{node\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+retrieves node id from its name 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+name} & node name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int node id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_ab45a134fd4a850085e7e709bb3e91764}\label{classlitegraph_1_1Graph_ab45a134fd4a850085e7e709bb3e91764}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!is\+\_\+edge@{is\+\_\+edge}}
+\index{is\+\_\+edge@{is\+\_\+edge}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{is\+\_\+edge()}{is\_edge()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+bool \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::is\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+checks if an edge is present in between two nodes 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & source node id \\
+\hline
+{\em dst} & destination node id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool (is there an edge ?) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a48e0035e3e126eb0c6f23692d6fab16d}\label{classlitegraph_1_1Graph_a48e0035e3e126eb0c6f23692d6fab16d}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!name@{name}}
+\index{name@{name}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+std\+::string \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::name (\begin{DoxyParamCaption}\item[{int}]{node\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+retrieves node name from its id 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+id} & target node id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string node name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a065ec79ff100c687df78e4e90172e17b}\label{classlitegraph_1_1Graph_a065ec79ff100c687df78e4e90172e17b}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{neighbors()}{neighbors()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+std\+::set$<$ int $>$ \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::neighbors (\begin{DoxyParamCaption}\item[{int}]{node\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+returns a set of neighbouring (distance 1) nodes 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+id} & target node id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of node ids 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_aa7009938b623c493b2017c3cea97574e}\label{classlitegraph_1_1Graph_aa7009938b623c493b2017c3cea97574e}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!operator()@{operator()}}
+\index{operator()@{operator()}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+E \& \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::operator() (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+edge selection operator (from node src to node dst) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & source node \\
+\hline
+{\em dst} & dest node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+edge Class instance (by reference) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a5761af304131b2977a756d0a5dcd5b4e}\label{classlitegraph_1_1Graph_a5761af304131b2977a756d0a5dcd5b4e}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!operator()@{operator()}}
+\index{operator()@{operator()}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+E \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::operator() (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dst }\end{DoxyParamCaption}) const}
+
+
+
+edge operator (from node src to node dst) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & source node \\
+\hline
+{\em dst} & dest node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+edge Class instance (by copy) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a2a44ddff3d0fa31a70c7fe0102e114e2}\label{classlitegraph_1_1Graph_a2a44ddff3d0fa31a70c7fe0102e114e2}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+T \& \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{node\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+node selection operator (by id) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+name} & node id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node Class instance (by reference) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a791c3a42fa2150cbf02baed18765f72e}\label{classlitegraph_1_1Graph_a791c3a42fa2150cbf02baed18765f72e}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+T \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{node\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+node selection operator (by id) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+name} & node id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node Class instance (by copy) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_acbeefc1b802edb8c5886fa764a5e1507}\label{classlitegraph_1_1Graph_acbeefc1b802edb8c5886fa764a5e1507}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+T \& \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::string}]{node\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+node selection operator (by name) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+name} & node name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node Class instance (by reference) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a15c0fc0dfe015a19d09d568407dad2f0}\label{classlitegraph_1_1Graph_a15c0fc0dfe015a19d09d568407dad2f0}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+T \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::string}]{node\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+node selection operator (by name) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+name} & node name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node Class instance (by copy) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a1c505004169416bf4ede9e6ed3856ae0}\label{classlitegraph_1_1Graph_a1c505004169416bf4ede9e6ed3856ae0}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!print\+\_\+loops@{print\+\_\+loops}}
+\index{print\+\_\+loops@{print\+\_\+loops}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{print\+\_\+loops()}{print\_loops()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::print\+\_\+loops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints loop matrix Node\+\_\+id x Steps 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_ad3e8c02ec87f10d3c2723265e30fc6fc}\label{classlitegraph_1_1Graph_ad3e8c02ec87f10d3c2723265e30fc6fc}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!print\+\_\+walk@{print\+\_\+walk}}
+\index{print\+\_\+walk@{print\+\_\+walk}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{print\+\_\+walk()}{print\_walk()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::print\+\_\+walk (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+prints walk matrices 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & step distance/level\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a8a7a1e54a475668cdda309ee41501642}\label{classlitegraph_1_1Graph_a8a7a1e54a475668cdda309ee41501642}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!remove\+\_\+edge@{remove\+\_\+edge}}
+\index{remove\+\_\+edge@{remove\+\_\+edge}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{remove\+\_\+edge()}{remove\_edge()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+void \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::remove\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+removes a previously added edge from the graph 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & source node id \\
+\hline
+{\em dst} & dst node id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_a0d7fe1dcd24ddf296688b118528e7f4c}\label{classlitegraph_1_1Graph_a0d7fe1dcd24ddf296688b118528e7f4c}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!seek\+\_\+loops@{seek\+\_\+loops}}
+\index{seek\+\_\+loops@{seek\+\_\+loops}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{seek\+\_\+loops()}{seek\_loops()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+Matrix2D$<$ int $>$ \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::seek\+\_\+loops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check the walk matrices for graph loops 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+loop\+Matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlitegraph_1_1Graph_aaa0517e9ac14a77d552ce635ee9952c3}\label{classlitegraph_1_1Graph_aaa0517e9ac14a77d552ce635ee9952c3}} 
+\index{litegraph\+::\+Graph@{litegraph\+::\+Graph}!size@{size}}
+\index{size@{size}!litegraph\+::\+Graph@{litegraph\+::\+Graph}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T , class E $>$ \\
+int \hyperlink{classlitegraph_1_1Graph}{litegraph\+::\+Graph}$<$ T, E $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retrives graph size (number of nodes) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & node Class \\
+\hline
+{\em E} & edge Class\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+int nodes number 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/litegraph.\+hpp\end{DoxyCompactItemize}

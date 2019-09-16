@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classlitegraph_1_1Node" kind="class" language="C++" prot="public">
+    <compoundname>litegraph::Node</compoundname>
+    <includes refid="litegraph_8hpp" local="no">litegraph.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlitegraph_1_1Node_1a7a79c756a1157550811b4d0af5834c47" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int litegraph::Node::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="30" column="1" bodyfile="inc/litegraph.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlitegraph_1_1Node_1a455e0290ddccd7b4d623cb0cde98d9bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>litegraph::Node::Node</definition>
+        <argsstring>(int val=0)</argsstring>
+        <name>Node</name>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="27" column="1" bodyfile="inc/litegraph.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classlitegraph_1_1Node_1a90a682cbc01b0d25b6be757c710dfcf5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual litegraph::Node::~Node</definition>
+        <argsstring>()</argsstring>
+        <name>~Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/litegraph.hpp" line="28" column="1" bodyfile="inc/litegraph.hpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>example node Class </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/litegraph.hpp" line="25" column="1" bodyfile="inc/litegraph.hpp" bodystart="24" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classlitegraph_1_1Node_1a7a79c756a1157550811b4d0af5834c47" prot="private" virt="non-virtual"><scope>litegraph::Node</scope><name>_value</name></member>
+      <member refid="classlitegraph_1_1Node_1a455e0290ddccd7b4d623cb0cde98d9bf" prot="public" virt="non-virtual"><scope>litegraph::Node</scope><name>Node</name></member>
+      <member refid="classlitegraph_1_1Node_1a90a682cbc01b0d25b6be757c710dfcf5" prot="public" virt="virtual"><scope>litegraph::Node</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

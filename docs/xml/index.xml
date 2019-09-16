@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classlitegraph_1_1Edge" kind="class"><name>litegraph::Edge</name>
+    <member refid="classlitegraph_1_1Edge_1a79567fac013781171ecfc5ae49f47ba3" kind="variable"><name>_value</name></member>
+    <member refid="classlitegraph_1_1Edge_1a7cb29ba156d8bd18c1f9f4bc3258baa0" kind="function"><name>Edge</name></member>
+    <member refid="classlitegraph_1_1Edge_1abc17234a2110cf94c10e316a5cfd6460" kind="function"><name>~Edge</name></member>
+  </compound>
+  <compound refid="classlitegraph_1_1Graph" kind="class"><name>litegraph::Graph</name>
+    <member refid="classlitegraph_1_1Graph_1a3d65c3612d40ba9e2f9ef2fefab1eacd" kind="variable"><name>MAX_NODES</name></member>
+    <member refid="classlitegraph_1_1Graph_1ae463a702b221bc6d88311472cfc32625" kind="variable"><name>_adjMat</name></member>
+    <member refid="classlitegraph_1_1Graph_1a362827db894931ab6d8a6fa344d18373" kind="variable"><name>_adjMatObj</name></member>
+    <member refid="classlitegraph_1_1Graph_1a23f68a3399ac3a4e55712e947e0b2b3d" kind="variable"><name>_nodes_dict</name></member>
+    <member refid="classlitegraph_1_1Graph_1a90dd013bf9042c47be529eb1ca8435bc" kind="variable"><name>_nodes</name></member>
+    <member refid="classlitegraph_1_1Graph_1afb4cca6846ab1b6b34c665f25f0512e1" kind="variable"><name>_loopsMat</name></member>
+    <member refid="classlitegraph_1_1Graph_1a924a7ec42d462e9a1eee9d04e39033ca" kind="variable"><name>_walksMat</name></member>
+    <member refid="classlitegraph_1_1Graph_1a12cc129bd0eb148e5703d810a825318b" kind="function"><name>Graph</name></member>
+    <member refid="classlitegraph_1_1Graph_1a21be4c8da4919456c3bc71f2e08812ae" kind="function"><name>~Graph</name></member>
+    <member refid="classlitegraph_1_1Graph_1a1f3eff13f5cf08258594bbe7cf40503b" kind="function"><name>add_nodes</name></member>
+    <member refid="classlitegraph_1_1Graph_1a476c0aa77439348c6f829b614b619aeb" kind="function"><name>add_node</name></member>
+    <member refid="classlitegraph_1_1Graph_1ad218cf49859923a415ad838ba56b0ea2" kind="function"><name>add_node</name></member>
+    <member refid="classlitegraph_1_1Graph_1ab99eb9988ddc5734afba373a97b44423" kind="function"><name>add_edge</name></member>
+    <member refid="classlitegraph_1_1Graph_1aecce1029e4ec451ab609c474e00f283f" kind="function"><name>add_edge</name></member>
+    <member refid="classlitegraph_1_1Graph_1a8a7a1e54a475668cdda309ee41501642" kind="function"><name>remove_edge</name></member>
+    <member refid="classlitegraph_1_1Graph_1a2a44ddff3d0fa31a70c7fe0102e114e2" kind="function"><name>operator[]</name></member>
+    <member refid="classlitegraph_1_1Graph_1a791c3a42fa2150cbf02baed18765f72e" kind="function"><name>operator[]</name></member>
+    <member refid="classlitegraph_1_1Graph_1acbeefc1b802edb8c5886fa764a5e1507" kind="function"><name>operator[]</name></member>
+    <member refid="classlitegraph_1_1Graph_1a15c0fc0dfe015a19d09d568407dad2f0" kind="function"><name>operator[]</name></member>
+    <member refid="classlitegraph_1_1Graph_1aa7009938b623c493b2017c3cea97574e" kind="function"><name>operator()</name></member>
+    <member refid="classlitegraph_1_1Graph_1a5761af304131b2977a756d0a5dcd5b4e" kind="function"><name>operator()</name></member>
+    <member refid="classlitegraph_1_1Graph_1a48e0035e3e126eb0c6f23692d6fab16d" kind="function"><name>name</name></member>
+    <member refid="classlitegraph_1_1Graph_1a74f404758d946ef99d0fa803ce98ee40" kind="function"><name>id</name></member>
+    <member refid="classlitegraph_1_1Graph_1aaa0517e9ac14a77d552ce635ee9952c3" kind="function"><name>size</name></member>
+    <member refid="classlitegraph_1_1Graph_1ab45a134fd4a850085e7e709bb3e91764" kind="function"><name>is_edge</name></member>
+    <member refid="classlitegraph_1_1Graph_1a065ec79ff100c687df78e4e90172e17b" kind="function"><name>neighbors</name></member>
+    <member refid="classlitegraph_1_1Graph_1a0d7fe1dcd24ddf296688b118528e7f4c" kind="function"><name>seek_loops</name></member>
+    <member refid="classlitegraph_1_1Graph_1a808c3e69501e924be8f63a9f722dc91b" kind="function"><name>has_loops</name></member>
+    <member refid="classlitegraph_1_1Graph_1ad3e8c02ec87f10d3c2723265e30fc6fc" kind="function"><name>print_walk</name></member>
+    <member refid="classlitegraph_1_1Graph_1a1c505004169416bf4ede9e6ed3856ae0" kind="function"><name>print_loops</name></member>
+    <member refid="classlitegraph_1_1Graph_1ae3e33708c0a1bf2e421d945f39fe3276" kind="function"><name>_gen_walks</name></member>
+    <member refid="classlitegraph_1_1Graph_1a351d62f5a7dc0a8b3251bc0e8cfeee5d" kind="function"><name>_boolMat2mat2D</name></member>
+    <member refid="classlitegraph_1_1Graph_1a3b91d5b50bff9e47e2c6c2f8ca71fb7b" kind="function"><name>_mat_mult</name></member>
+    <member refid="classlitegraph_1_1Graph_1acad7d853be0de6c874247b69accb003b" kind="function"><name>_mat_pow</name></member>
+  </compound>
+  <compound refid="classlitegraph_1_1Node" kind="class"><name>litegraph::Node</name>
+    <member refid="classlitegraph_1_1Node_1a7a79c756a1157550811b4d0af5834c47" kind="variable"><name>_value</name></member>
+    <member refid="classlitegraph_1_1Node_1a455e0290ddccd7b4d623cb0cde98d9bf" kind="function"><name>Node</name></member>
+    <member refid="classlitegraph_1_1Node_1a90a682cbc01b0d25b6be757c710dfcf5" kind="function"><name>~Node</name></member>
+  </compound>
+  <compound refid="namespacelitegraph" kind="namespace"><name>litegraph</name>
+    <member refid="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3" kind="enum"><name>dir_t</name></member>
+    <member refid="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3a050f5090dc230bc8ba731b83c52f645b" kind="enumvalue"><name>AtoB</name></member>
+    <member refid="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3a90b2413f4ff0e807cf12dca3d96beeb4" kind="enumvalue"><name>BtoA</name></member>
+    <member refid="litegraph_8hpp_1ae4f8d18205025fb85ecd75cf4f470ee3ad5c4b922c0781abba65b6e85517590a9" kind="enumvalue"><name>Both</name></member>
+    <member refid="litegraph_8hpp_1a423f56f4dde8cd53cb18abd47b6a1ef2" kind="typedef"><name>Matrix2D</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="litegraph_8hpp" kind="file"><name>litegraph.hpp</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="example__test_8cpp" kind="file"><name>example_test.cpp</name>
+    <member refid="example__test_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>
