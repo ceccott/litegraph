@@ -1,5 +1,5 @@
-#ifndef LITE_GRAPH_HPP
-#define LITE_GRAPH_HPP
+#ifndef INC_LITE_GRAPH_HPP_
+#define INC_LITE_GRAPH_HPP
 
 #include <iostream>
 #include <vector>
@@ -16,16 +16,14 @@ namespace litegraph
 template <typename T>
 using Matrix2D = std::vector<std::vector<T> >;
 
-class Edge;
-
 /**
  * @brief example node Class
  */
 class Node
 {
 public:
-    Node (int val = 0):_value(val){};
-    virtual ~Node (){};
+    Node (int val = 0):_value(val){}
+    virtual ~Node (){}
 private:
     int _value;
 };
@@ -36,8 +34,8 @@ private:
 class Edge
 {
 public:
-    Edge (int val = 0):_value(val){};
-    virtual ~Edge (){};
+    Edge (int val = 0):_value(val){}
+    virtual ~Edge (){}
 private:
     int _value;
 };
@@ -63,8 +61,8 @@ public:
     Graph (){
        _nodes.reserve(MAX_NODES);
        _walksMat.reserve(MAX_NODES);
-    };
-    ~Graph (){};
+    }
+    ~Graph (){}
 
     void add_nodes(int num);
     void add_node(const T& node = T());

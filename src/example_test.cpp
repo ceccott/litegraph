@@ -1,8 +1,8 @@
 #include <iostream>
-#include "litegraph.hpp"
+#include <litegraph.hpp>
 
-using namespace std;
-using namespace litegraph;
+//using namespace std;
+//using namespace litegraph;
 
 //litegraph test
 int main(int argc, char *argv[])
@@ -10,15 +10,15 @@ int main(int argc, char *argv[])
     std::cout << "- - - Test Start - - -" << std::endl;
 
     // Generates graph<Node,DirEdge>
-    auto g = litegraph::Graph<Node,Edge>();
+    auto g = litegraph::Graph<litegraph::Node, litegraph::Edge>();
 
     // add nodes and edges to the graph
-    g.add_node(Node(10)); // node 0
-    g.add_node(Node(20)); // node 1
-    g.add_node(Node(30)); // node 2
-    g.add_node(Node(40)); // node 3
+    g.add_node(litegraph::Node(10));     // node 0
+    g.add_node(litegraph::Node(20));     // node 1
+    g.add_node(litegraph::Node(30));     // node 2
+    g.add_node(litegraph::Node(40));     // node 3
 
-    //g.add_nodes(4); //alternatively, generic
+    //g.add_nodes(4);    //alternatively, generic
 
     g.add_edge(0,1);
     g.add_edge(1,2);
@@ -63,6 +63,6 @@ int main(int argc, char *argv[])
         std::cout<<"loops"<< std::endl;
     }
 
-    std::cout<<std::endl << "- - - Test End - - -" << std::endl;
+    std::cout<< std::endl << "- - - Test End - - -" << std::endl;
     return 0;
 }
