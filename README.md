@@ -3,7 +3,7 @@ A lightweight header only C++ library for graph abstraction and implementation
 
 ### Install
 
-Copy paste `inc/litegraph.cpp` to custom project or install to system with `sudo make install`
+Copy paste `inc/litegraph.hpp` to custom project or install to system with `sudo make install`
 
 ### Test
 
